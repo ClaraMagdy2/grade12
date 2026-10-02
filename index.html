@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Hospital Command Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">✚</div>
+      <div><strong>SMART HOSPITAL</strong><span>COMMAND CENTER</span></div>
+    </div>
+    <nav>
+      <button class="nav-item active" data-page="home">⌂ <span>Home</span></button>
+      <button class="nav-item" data-page="systems">▦ <span>Computing Systems</span></button>
+      <button class="nav-item" data-page="hardware">⚡ <span>Hardware & Logic</span></button>
+      <button class="nav-item" data-page="network">⌁ <span>Network Center</span></button>
+      <button class="nav-item" data-page="security">♙ <span>Security</span></button>
+      <button class="nav-item" data-page="algorithms">ƒ <span>Python Algorithms</span></button>
+      <button class="nav-item" data-page="data">▤ <span>Data Structures</span></button>
+      <button class="nav-item" data-page="dashboard">◈ <span>Project Summary</span></button>
+    </nav>
+    <div class="sidebar-note">GRADE 12<br>COMPUTING PROJECT</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>SMART HOSPITAL <b>/</b> <span id="page-title">Home</span></div>
+      <div class="project-label">INTEGRATED PROJECT</div>
+    </header>
+
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <span class="eyebrow">GRADE 12 · COMPUTING PROJECT</span>
+        <h1>Smart Hospital<br><em>Command Center</em></h1>
+        <p>A connected hospital computing project combining computing systems, hardware and logic, networks, cybersecurity, Python algorithms, and data structures.</p>
+      </div>
+
+      <div class="section-heading">
+        <span class="eyebrow">PROJECT STRUCTURE</span>
+        <h2>Six connected standards</h2>
+      </div>
+      <div class="module-grid">
+        <button class="module-card" data-page-link="systems"><span>01</span><h3>Computing Systems</h3><p>System layers and interaction between users, software, operating systems, and hardware.</p></button>
+        <button class="module-card" data-page-link="hardware"><span>02</span><h3>Hardware & Logic</h3><p>Arduino, temperature sensor, emergency button, LED, buzzer, and OR logic.</p></button>
+        <button class="module-card" data-page-link="network"><span>03</span><h3>Network Center</h3><p>Hospital topology, servers, router, switch, LAN, bandwidth, and latency.</p></button>
+        <button class="module-card" data-page-link="security"><span>04</span><h3>Security</h3><p>Authentication, authorization, access control, and security event logging.</p></button>
+        <button class="module-card" data-page-link="algorithms"><span>05</span><h3>Python Algorithms</h3><p>Patient-risk classification using temperature, heart rate, and oxygen.</p></button>
+        <button class="module-card" data-page-link="data"><span>06</span><h3>Data Structures</h3><p>Patient records stored using lists and dictionaries and processed by functions.</p></button>
+      </div>
+
+      <div class="overview">
+        <div class="info-card"><h3>Project Goal</h3><p>Design a hospital computing system that connects physical sensors, software, networking, security, algorithms, and structured patient data.</p></div>
+        <div class="info-card"><h3>Tools Used</h3><p>Canva · Tinkercad Circuits · Google Colab / Python · Google Sites</p></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-systems">
+      <div class="page-intro"><span class="eyebrow">01 · COMPUTING SYSTEMS</span><h1>Computing system layers</h1><p>The project shows how a hospital emergency request moves from the user interface through software and the operating system to physical hardware.</p></div>
+      <div class="layer-stack">
+        <div class="layer"><b>01</b><div><h3>User & Web Interface</h3><p>Doctors and nurses interact with the hospital dashboard and review patient information.</p></div><span>USER</span></div>
+        <div class="connector">↓</div>
+        <div class="layer"><b>02</b><div><h3>Application Layer</h3><p>The hospital application collects, displays, and formats patient information.</p></div><span>APP</span></div>
+        <div class="connector">↓</div>
+        <div class="layer"><b>03</b><div><h3>Operating System</h3><p>Manages hardware resources, CPU tasks, memory, device drivers, and network access.</p></div><span>OS</span></div>
+        <div class="connector">↓</div>
+        <div class="layer"><b>04</b><div><h3>Hardware & IoT Sensors</h3><p>Physical microcontroller, temperature sensor, emergency switch, LED, and buzzer.</p></div><span>I/O</span></div>
+      </div>
+      <div class="image-card"><div class="card-head"><h3>Project Diagram</h3><span>Computing system layers</span></div><img src="assets/system-layers.png" alt="Computing system layers diagram"></div>
+    </section>
+
+    <section class="page" id="page-hardware">
+      <div class="page-intro"><span class="eyebrow">02 · HARDWARE & LOGIC</span><h1>Hospital emergency hardware</h1><p>This section documents the Tinkercad circuit used in the project and the logic connecting its inputs and outputs.</p></div>
+      <div class="hardware-info">
+        <div class="info-card"><h3>Inputs</h3><ul><li>TMP36 temperature sensor → A0</li><li>Emergency pushbutton → D3</li></ul></div>
+        <div class="info-card"><h3>Logic</h3><p><b>Temperature ≥ 30°C OR Button = HIGH</b></p><p>If either condition is true, the emergency outputs are activated.</p></div>
+        <div class="info-card"><h3>Outputs</h3><ul><li>Red LED → D5</li><li>Piezo buzzer → D8</li></ul></div>
+      </div>
+      <div class="image-card"><div class="card-head"><h3>Tinkercad Circuit</h3><span>Arduino UNO</span></div><img src="assets/tinkercad-circuit.png" alt="Arduino emergency circuit"></div>
+      <div class="image-card"><div class="card-head"><h3>Tinkercad Block Code</h3><span>OR condition</span></div><img src="assets/tinkercad-blocks.png" alt="Tinkercad block code"></div>
+    </section>
+
+    <section class="page" id="page-network">
+      <div class="page-intro"><span class="eyebrow">03 · NETWORK CENTER</span><h1>Hospital network architecture</h1><p>The network connects hospital servers and devices through the router and switches so departments can exchange information.</p></div>
+      <div class="network-cards">
+        <div class="info-card"><h3>Network Devices</h3><p>Internet · Router · Hospital Server · PACS Server · Hub/Switch · PCs · Mobile/IoT devices</p></div>
+        <div class="info-card"><h3>Performance Metrics</h3><p><b>Bandwidth:</b> 100 Mbps<br><b>Network Load:</b> 65%<br><b>Latency:</b> 12 ms</p></div>
+        <div class="info-card"><h3>Purpose</h3><p>Support communication between clinical systems, servers, computers, and connected hospital devices.</p></div>
+      </div>
+      <div class="image-card"><div class="card-head"><h3>Hospital Network Topology</h3><span>Network architecture</span></div><img src="assets/network-topology.png" alt="Hospital network topology"></div>
+    </section>
+
+    <section class="page" id="page-security">
+      <div class="page-intro"><span class="eyebrow">04 · CYBERSECURITY</span><h1>Security & software protection</h1><p>The project demonstrates the main security concepts needed to protect hospital information.</p></div>
+      <div class="security-cards">
+        <div class="info-card"><h3>Authentication</h3><p>Users provide a username and password before accessing the hospital system.</p></div>
+        <div class="info-card"><h3>Authorization</h3><p>Permissions depend on the user's role and determine which information and actions are available.</p></div>
+        <div class="info-card"><h3>Event Logging</h3><p>Failed access attempts can be recorded as security events for later review.</p></div>
+      </div>
+      <div class="roles">
+        <div><b>Doctor</b><span>Full clinical access</span></div>
+        <div><b>Nurse</b><span>Read / update clinical data</span></div>
+        <div><b>Guest</b><span>Restricted access</span></div>
+      </div>
+      <div class="image-card"><div class="card-head"><h3>Python Authentication Example</h3><span>Project evidence</span></div><img src="assets/python-login.png" alt="Python authentication output"></div>
+    </section>
+
+    <section class="page" id="page-algorithms">
+      <div class="page-intro"><span class="eyebrow">05 · PYTHON ALGORITHMS</span><h1>Patient emergency algorithm</h1><p>The algorithm classifies a patient's condition from three vital measurements.</p></div>
+      <div class="algorithm-layout">
+        <div class="info-card">
+          <h3>Decision Rules</h3>
+          <p><b>Critical:</b> temperature &gt; 38.5°C OR heart rate &gt; 120 OR oxygen &lt; 90%</p>
+          <p><b>Warning:</b> temperature &gt; 37.5°C OR heart rate &gt; 100 OR oxygen &lt; 95%</p>
+          <p><b>Stable:</b> none of the warning or critical conditions are met.</p>
+        </div>
+        <div class="code-card"><div class="code-head">evaluate_patient()</div><pre>def evaluate_patient(temp, heart_rate, oxygen):
+    if temp &gt; 38.5 or heart_rate &gt; 120 or oxygen &lt; 90:
+        return "CRITICAL EMERGENCY"
+    elif temp &gt; 37.5 or heart_rate &gt; 100 or oxygen &lt; 95:
+        return "WARNING - MONITOR"
+    else:
+        return "STABLE"</pre></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-data">
+      <div class="page-intro"><span class="eyebrow">06 · DATA STRUCTURES</span><h1>Patient data organization</h1><p>A list of dictionaries stores patient information so the algorithm can process multiple patients.</p></div>
+      <div class="code-card"><div class="code-head">hospital_database</div><pre>hospital_database = [
+    {"id": "P101", "room": "ICU-01", "temp": 37.0, "hr": 75, "o2": 98},
+    {"id": "P102", "room": "ICU-02", "temp": 39.2, "hr": 125, "o2": 88},
+    {"id": "P103", "room": "ER-05",  "temp": 36.8, "hr": 82, "o2": 96}
+]</pre></div>
+      <div class="table-card"><div class="card-head"><h3>Example Patient Records</h3><span>List + dictionaries</span></div><table><thead><tr><th>ID</th><th>Room</th><th>Temperature</th><th>Heart Rate</th><th>O₂</th><th>Example Status</th></tr></thead><tbody>
+        <tr><td>P101</td><td>ICU-01</td><td>37.0°C</td><td>75</td><td>98%</td><td><span class="pill stable">STABLE</span></td></tr>
+        <tr><td>P102</td><td>ICU-02</td><td>39.2°C</td><td>125</td><td>88%</td><td><span class="pill critical">CRITICAL</span></td></tr>
+        <tr><td>P103</td><td>ER-05</td><td>36.8°C</td><td>82</td><td>96%</td><td><span class="pill stable">STABLE</span></td></tr>
+      </tbody></table></div>
+      <div class="image-card"><div class="card-head"><h3>Python Output</h3><span>Project evidence</span></div><img src="assets/python-patients.png" alt="Python patient data output"></div>
+    </section>
+
+    <section class="page" id="page-dashboard">
+      <div class="page-intro"><span class="eyebrow">PROJECT SUMMARY</span><h1>Smart Hospital system overview</h1><p>A single summary of how the six project parts connect.</p></div>
+      <div class="summary-grid">
+        <div><span>01</span><h3>Interface</h3><p>Doctors and nurses access hospital information.</p></div>
+        <div><span>02</span><h3>Hardware</h3><p>Sensors and emergency outputs collect and communicate physical events.</p></div>
+        <div><span>03</span><h3>Network</h3><p>Servers and devices communicate through the hospital network.</p></div>
+        <div><span>04</span><h3>Security</h3><p>Authentication and authorization protect hospital information.</p></div>
+        <div><span>05</span><h3>Algorithm</h3><p>Python rules classify patient risk from vital measurements.</p></div>
+        <div><span>06</span><h3>Data</h3><p>Lists and dictionaries organize multiple patient records.</p></div>
+      </div>
+      <div class="flow"><div>Patient Sensors</div><b>→</b><div>Arduino / Hardware</div><b>→</b><div>Network</div><b>→</b><div>Application</div><b>→</b><div>Patient Data & Alerts</div></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
